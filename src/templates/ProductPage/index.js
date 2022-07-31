@@ -16,13 +16,13 @@ const ProductPage = ({ data }) => {
       <Container>
         <TwoColumnGrid>
           <GridLeft>
-            {product.images.map(image => (
+            {/* {product.images.map(image => (
               <GatsbyImage
                 key={image.id}
                 image={image.localFile.childImageSharp.gatsbyImageData}
                 alt={image.altText || product.title}
               />
-            ))}
+            ))} */}
           </GridLeft>
           <GridRight>
             <ProductTitle>{product.title}</ProductTitle>
@@ -48,7 +48,7 @@ export const query = graphql`
       descriptionHtml
       shopifyId
       options {
-        id
+        id: shopifyId
         name
         values
       }
@@ -73,19 +73,19 @@ export const query = graphql`
           currencyCode
         }
       }
-      images {
-        originalSrc
-        id
-        localFile {
-          childImageSharp {
-            gatsbyImageData(
-              width: 910
-              placeholder: TRACED_SVG
-              layout: CONSTRAINED
-            )
-          }
-        }
-      }
+      # images {
+      #   originalSrc
+      #   id
+      #   localFile {
+      #     childImageSharp {
+      #       gatsbyImageData(
+      #         width: 910
+      #         placeholder: TRACED_SVG
+      #         layout: CONSTRAINED
+      #       )
+      #     }
+      #   }
+      # }
     }
   }
 `

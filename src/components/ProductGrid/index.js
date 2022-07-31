@@ -19,19 +19,18 @@ const ProductGrid = () => {
               title
               handle
               createdAt
-              images {
-                id
-                originalSrc
-                altText
-                localFile {
-                  childImageSharp {
-                    gatsbyImageData(layout: FULL_WIDTH)
-                  }
-                }
-              }
+              # images {
+              #   id
+              #   originalSrc
+              #   altText
+              #   localFile {
+              #     childImageSharp {
+              #       gatsbyImageData(layout: FULL_WIDTH)
+              #     }
+              #   }
+              # }
               featuredImage {
                 altText
-                id
                 localFile {
                   childImageSharp {
                     gatsbyImageData(layout: FULL_WIDTH)
